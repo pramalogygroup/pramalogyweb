@@ -1,5 +1,13 @@
-import Link from "next/link"
-import { Facebook, Twitter, Linkedin, Instagram, Mail, Phone, MapPin } from "lucide-react"
+import Link from "next/link";
+import {
+  Facebook,
+  Twitter,
+  Linkedin,
+  Instagram,
+  Mail,
+  Phone,
+  MapPin,
+} from "lucide-react";
 
 const footerLinks = {
   company: [
@@ -26,7 +34,7 @@ const footerLinks = {
     { name: "API Reference", href: "/api-docs" },
     { name: "Status", href: "/status" },
   ],
-}
+};
 
 export default function Footer() {
   return (
@@ -44,20 +52,33 @@ export default function Footer() {
               </span>
             </Link>
             <p className="text-gray-400 mb-4 leading-relaxed">
-              Transforming ideas into digital solutions. We specialize in IT services and innovative SaaS products that
-              solve real-world problems.
+              Transforming ideas into digital solutions. We specialize in IT
+              services and innovative SaaS products that solve real-world
+              problems.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-blue-400 transition-colors">
+              <a
+                href="#"
+                className="text-gray-400 hover:text-blue-400 transition-colors"
+              >
                 <Facebook className="h-5 w-5" />
               </a>
-              <a href="#" className="text-gray-400 hover:text-blue-400 transition-colors">
+              <a
+                href="#"
+                className="text-gray-400 hover:text-blue-400 transition-colors"
+              >
                 <Twitter className="h-5 w-5" />
               </a>
-              <a href="#" className="text-gray-400 hover:text-blue-400 transition-colors">
+              <a
+                href="#"
+                className="text-gray-400 hover:text-blue-400 transition-colors"
+              >
                 <Linkedin className="h-5 w-5" />
               </a>
-              <a href="#" className="text-gray-400 hover:text-blue-400 transition-colors">
+              <a
+                href="#"
+                className="text-gray-400 hover:text-blue-400 transition-colors"
+              >
                 <Instagram className="h-5 w-5" />
               </a>
             </div>
@@ -69,7 +90,10 @@ export default function Footer() {
             <ul className="space-y-2">
               {footerLinks.company.map((link) => (
                 <li key={link.name}>
-                  <Link href={link.href} className="text-gray-400 hover:text-white transition-colors">
+                  <Link
+                    href={link.href}
+                    className="text-gray-400 hover:text-white transition-colors"
+                  >
                     {link.name}
                   </Link>
                 </li>
@@ -82,7 +106,10 @@ export default function Footer() {
             <ul className="space-y-2">
               {footerLinks.services.map((link) => (
                 <li key={link.name}>
-                  <Link href={link.href} className="text-gray-400 hover:text-white transition-colors">
+                  <Link
+                    href={link.href}
+                    className="text-gray-400 hover:text-white transition-colors"
+                  >
                     {link.name}
                   </Link>
                 </li>
@@ -95,7 +122,10 @@ export default function Footer() {
             <ul className="space-y-2">
               {footerLinks.products.map((link) => (
                 <li key={link.name}>
-                  <Link href={link.href} className="text-gray-400 hover:text-white transition-colors">
+                  <Link
+                    href={link.href}
+                    className="text-gray-400 hover:text-white transition-colors"
+                  >
                     {link.name}
                   </Link>
                 </li>
@@ -108,7 +138,10 @@ export default function Footer() {
             <ul className="space-y-2">
               {footerLinks.support.map((link) => (
                 <li key={link.name}>
-                  <Link href={link.href} className="text-gray-400 hover:text-white transition-colors">
+                  <Link
+                    href={link.href}
+                    className="text-gray-400 hover:text-white transition-colors"
+                  >
                     {link.name}
                   </Link>
                 </li>
@@ -122,35 +155,46 @@ export default function Footer() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
             <div className="flex items-center space-x-3">
               <Mail className="h-5 w-5 text-blue-400" />
-              <span className="text-gray-400">contact@pramalogy.com</span>
+              <span className="text-gray-400">pramalogygroup@gmail.com</span>
             </div>
             <div className="flex items-center space-x-3">
               <Phone className="h-5 w-5 text-blue-400" />
-              <span className="text-gray-400">+91 (555) 123-4567</span>
+              <span className="text-gray-400">+977 9845315037</span>
             </div>
             <div className="flex items-center space-x-3">
               <MapPin className="h-5 w-5 text-blue-400" />
-              <span className="text-gray-400">Mumbai, India</span>
+              <span className="text-gray-400">Hetauda, Nepal</span>
             </div>
           </div>
         </div>
 
         {/* Bottom */}
         <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-gray-400 text-sm">© 2025 Pramalogy. All rights reserved.</p>
+          <p className="text-gray-400 text-sm">
+            © 2025 Pramalogy. All rights reserved.
+          </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
-            <Link href="/privacy" className="text-gray-400 hover:text-white text-sm transition-colors">
+            <Link
+              href="/privacy"
+              className="text-gray-400 hover:text-white text-sm transition-colors"
+            >
               Privacy Policy
             </Link>
-            <Link href="/terms" className="text-gray-400 hover:text-white text-sm transition-colors">
+            <Link
+              href="/terms"
+              className="text-gray-400 hover:text-white text-sm transition-colors"
+            >
               Terms of Service
             </Link>
-            <Link href="/cookies" className="text-gray-400 hover:text-white text-sm transition-colors">
+            <Link
+              href="/cookies"
+              className="text-gray-400 hover:text-white text-sm transition-colors"
+            >
               Cookie Policy
             </Link>
           </div>
         </div>
       </div>
     </footer>
-  )
+  );
 }

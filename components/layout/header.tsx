@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
 import { cn } from "@/lib/utils";
+import Image from "next/image";
 
 const navigation = [
   { name: "Home", href: "/" },
@@ -35,15 +36,20 @@ export default function Header() {
       className={cn(
         "fixed top-0 w-full z-50 transition-all duration-300 bg-black",
         isScrolled
-          ? "bg-background/95 backdrop-blur-sm border-b shadow-sm"
+          ? "bg-white backdrop-blur-sm border-b shadow-sm"
           : "bg-transparent"
       )}
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <Link href="/" className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-sm">P</span>
+            <div className="w-8 h-8 rounded-lg flex items-center justify-center">
+              <Image
+                alt="company brand"
+                src="/pramalogy.png"
+                width={32}
+                height={32}
+              />
             </div>
             <span className="text-xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
               Pramalogy
@@ -51,7 +57,7 @@ export default function Header() {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
+          <nav className="hidden md:flex items-center space-x-6 lg:space-x-8">
             {navigation.map((item) => (
               <Link
                 key={item.name}
@@ -72,17 +78,24 @@ export default function Header() {
             <Button variant="outline" size="sm">
               Get Quote
             </Button>
-            <Button size="sm">Start Free Trial</Button>
+            {/* <Button size="sm">Start Free Trial</Button> */}
           </div>
 
           {/* Mobile Navigation */}
           <Sheet open={isOpen} onOpenChange={setIsOpen}>
             <SheetTrigger asChild className="md:hidden">
-              <Button variant="ghost" size="icon">
-                <Menu className="h-5 w-5" />
+              <Button
+                variant="ghost"
+                size="icon"
+                className="cursor-pointer h-12 w-12"
+              >
+                <Menu className="h-12 w-12" />
               </Button>
             </SheetTrigger>
-            <SheetContent side="right" className="w-[300px] sm:w-[400px]">
+            <SheetContent
+              side="right"
+              className="w-[300px] sm:w-[400px] bg-white"
+            >
               <div className="flex flex-col space-y-4 mt-8">
                 {navigation.map((item) => (
                   <Link
@@ -103,9 +116,9 @@ export default function Header() {
                   <Button variant="outline" onClick={() => setIsOpen(false)}>
                     Get Quote
                   </Button>
-                  <Button onClick={() => setIsOpen(false)}>
+                  {/* <Button onClick={() => setIsOpen(false)}>
                     Start Free Trial
-                  </Button>
+                  </Button> */}
                 </div>
               </div>
             </SheetContent>

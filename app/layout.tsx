@@ -17,21 +17,22 @@ export const metadata: Metadata = {
     "Leading IT service and SaaS product company providing custom development solutions and innovative subscription-based products.",
 
   icons: {
-    icon: "/favicon.png", // path to favicon
-    shortcut: "/favicon.png", // optional, for old browsers
-    apple: "/favicon.png", // optional, for iOS devices
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
   },
+  // manifest: "/site.webmanifest",
 
   keywords:
     "IT services, SaaS products, custom development, software solutions, Pramalogy",
-  authors: [{ name: "Pramalogy Team" }],
+  authors: [{ name: "Pramalogy Group" }],
   creator: "Pramalogy",
   metadataBase: new URL("https://pramalogy.com"),
   openGraph: {
     type: "website",
     locale: "en_US",
     url: "https://pramalogy.com",
-    siteName: "Pramalogy",
+    siteName: "Pramalogy Group",
   },
   twitter: {
     card: "summary_large_image",
